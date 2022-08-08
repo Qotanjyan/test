@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Uchen&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(46, 39, 39);
+}
+
+.article_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.article_thumbnail_wrap {
+    position: relative;
+}
+
+.article_thumbnail_wrap:after {
+    pointer-events: none;
+    content: "";
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item_header_img {
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.item_footer_img {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.item_footer_img,
+.author_date {
+    float: left;
+}
+
+.intro_after_header {
+    text-align: left;
+    padding: 0px 20px;
+    color: rgb(255, 166, 0);
+    margin-bottom: 0;
+}
+
+.item_title,
+.item_description {
+    text-align: left;
+    margin-top: 0;
+}
+
+.item_title {
+    font-size: clamp(1.8rem, 1.8rem + .2vw, 3rem);
+    font-family: 'Merriweather', serif;
+}
+
+.item_title_link:hover {
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+.item_description {
+    color: #474747;
+    font-family: 'Uchen', serif;
+}
+
+.article_card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.article_article {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.article_publication_meta {
+    display: block;
+}
+
+.article_tags {
+    line-height: 1;
+    margin: 0 0 0.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+.article_tags>a {
+    text-transform: uppercase;
+    color: #ff7a18;
+    font-size: .66rem;
+    -webkit-margin-end: 0.66rem;
+    margin-inline-end: 0.66rem;
+    text-decoration: none;
+}
+
+.item_description {
+    line-height: 25px;
+}
+
+.div_footer_img {
+    -webkit-margin-before: auto;
+    margin-block-start: auto;
+}
+
+.item_footer_img,
+.author_date {
+    margin-bottom: 0;
+}
+
+.color_blue {
+    color: rgb(0 178 255 / 90%);
+}
+
+.font_italic {
+    font-style: italic;
+}
+
+.direct_link_btn {
+    border-radius: 3px;
+    background-color: grey;
+    color: white;
+    margin-right: 145px;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px 15px;
+}
+
+.fas {
+    color: red;
+}
+
+@media only screen and (max-width:919px) {
+    .article_card {
+        /* max-width: 50%; */
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .article_card {
+        /* max-width: 100%; */
+    }
+}
+
+/* .grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: red;
+    gap: 2rem;
+    grid-template-rows: repeat(auto, 1fr);
+}
+
+.grid_item{
+    background:blue;
+} */
+
+/* .grid_container {
+    display: grid;
+    grid-template-rows: 50px 150px;
+    grid-auto-rows: 15px;
+    gap: 10px;
+  }
+  
+  .grid_item {
+    background: lightblue;
+  }
+  
+  .grid_item:nth-child(n + 3) {
+    background: pink;
+  } */
+/* 
+  .grid_container {
+    display: grid;
+    grid-template-columns: 50px 150px;
+    grid-auto-columns: 15px 25px 35px;
+    grid-auto-flow: column;
+    gap: 10px;
+  }
+  
+  .grid_item {
+    min-height: 50px;
+    background: lightblue;
+  }
+  
+  .grid_item:nth-child(n + 3) {
+    background: pink;
+  } */
+
+/* .grid_container {
+    display: grid;
+    /* Три колонки */
+/* grid-template-columns: auto auto auto; */
+/* Два ряда */
+/* grid-template-rows: auto auto; */
+/* Автоматическое размещение в ряд */
+/* grid-auto-flow: row; */
+/* Отступы между ячейками */
+/* gap: 10px; */
+
+/* Для красоты */
+/* padding: 10px;
+    background: #f1f1f1;
+  } */
+
+/* .grid_item {
+    min-height: 50px;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    line-height: 1;
+    background: lightblue;
+  } */
+
+/* .grid_item3 {
+    /* Занимает один ряд и
+    растягивается на две колонки */
+/* grid-column: span 2;
+    background: pink;
+  } */
+
+/* https://doka.guide/css/grid-guide/ */
+/* 
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-areas:
+      "header header header"
+      "content content 👾"
+      "content content ."
+      "footer footer footer";
+  } 
+  
+  .grid_item1 {
+    grid-area: header;
+    background-color: purple;
+  }
+  
+  .grid_item2 {
+    grid-area: content;
+    background-color: gray;
+  }
+  
+  .grid_item3 {
+    grid-area: 👾;
+    background-color: pink;
+  }
+  
+  .grid_item4 {
+    grid-area: footer;
+    background-color: #bada55;
+  } */
+
+/* .grid_container {
+    display: grid;
+    grid-template: repeat(4, 150px) / 1fr 200px 1fr;
+  } */
+
+.grid_container {
+    display: grid;
+    grid-template:
+        [row1-start] 25px [row1-end] [row2-start] 25px [row2-end] / auto 50px auto;
+    grid-template-areas:
+        "header header header"
+        "footer footer footer";
+}
